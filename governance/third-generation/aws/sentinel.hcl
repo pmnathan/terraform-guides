@@ -16,7 +16,7 @@ module "aws-functions" {
 
 policy "enforce-mandatory-tags" {
   source = "./enforce-mandatory-tags.sentinel"
-  enforcement_level = "hard-mandatory"
+  enforcement_level = "advisory"
 }
 
 policy "require-private-acl-and-kms-for-s3-buckets" {
@@ -46,7 +46,7 @@ policy "restrict-availability-zones" {
 
 policy "restrict-current-ec2-instance-type" {
   source = "./restrict-current-ec2-instance-type.sentinel"
-  enforcement_level = "advisory"
+  enforcement_level = "hard-mandatory"
 }
 
 policy "restrict-db-instance-engines" {
